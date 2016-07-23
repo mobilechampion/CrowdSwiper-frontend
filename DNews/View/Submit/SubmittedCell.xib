@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="133" id="KGk-i7-Jjw" customClass="SubmittedCell" customModule="CrowdSwiper" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="133"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VX5-1u-Si7">
+                        <rect key="frame" x="10" y="10" width="226" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="wwY-bC-A1G" customClass="WESlider">
+                        <rect key="frame" x="250" y="2" width="64" height="31"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="G7F-hS-dSJ"/>
+                            <constraint firstAttribute="width" constant="60" id="bXr-qT-Hoi"/>
+                        </constraints>
+                    </slider>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4IM-mU-CLh" userLabel="sep">
+                        <rect key="frame" x="0.0" y="131" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="wQG-T7-bU8"/>
+                        </constraints>
+                    </view>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QpK-3Y-1bf" userLabel="approveButton">
+                        <rect key="frame" x="8" y="89" width="32" height="32"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="32" id="4Y0-3P-lnq"/>
+                            <constraint firstAttribute="height" constant="32" id="JUt-0e-XeD"/>
+                        </constraints>
+                        <state key="normal" image="bt-check"/>
+                        <state key="selected" image="bt-check-selected"/>
+                        <connections>
+                            <action selector="submittedButtonPressed:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="x9N-6h-tO8"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Automatically move to Home" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9k4-Sz-OyZ">
+                        <rect key="frame" x="47" y="97" width="265" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="4IM-mU-CLh" firstAttribute="top" secondItem="QpK-3Y-1bf" secondAttribute="bottom" constant="10" id="2F7-Vx-gBm"/>
+                    <constraint firstItem="VX5-1u-Si7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="2eP-jy-1Tv"/>
+                    <constraint firstAttribute="bottom" secondItem="4IM-mU-CLh" secondAttribute="bottom" id="CMN-PP-Hzb"/>
+                    <constraint firstItem="4IM-mU-CLh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="DCY-mg-XUb"/>
+                    <constraint firstItem="QpK-3Y-1bf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="DQD-Ms-lCP"/>
+                    <constraint firstItem="VX5-1u-Si7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="ITT-io-5wI"/>
+                    <constraint firstAttribute="trailing" secondItem="4IM-mU-CLh" secondAttribute="trailing" id="JIZ-Yd-xX8"/>
+                    <constraint firstItem="wwY-bC-A1G" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="2" id="KgY-Ht-xjn"/>
+                    <constraint firstItem="9k4-Sz-OyZ" firstAttribute="centerY" secondItem="QpK-3Y-1bf" secondAttribute="centerY" id="P9C-8Q-tMc"/>
+                    <constraint firstItem="QpK-3Y-1bf" firstAttribute="top" relation="greaterThanOrEqual" secondItem="VX5-1u-Si7" secondAttribute="bottom" constant="8" id="W5l-ed-PvA"/>
+                    <constraint firstItem="9k4-Sz-OyZ" firstAttribute="leading" secondItem="QpK-3Y-1bf" secondAttribute="trailing" constant="7" id="cq4-i0-p74"/>
+                    <constraint firstAttribute="trailing" secondItem="wwY-bC-A1G" secondAttribute="trailing" constant="8" id="ll7-3j-hnS"/>
+                    <constraint firstAttribute="trailing" secondItem="9k4-Sz-OyZ" secondAttribute="trailing" constant="8" id="t0E-z3-ZrK"/>
+                    <constraint firstItem="wwY-bC-A1G" firstAttribute="leading" secondItem="VX5-1u-Si7" secondAttribute="trailing" constant="16" id="zlv-6r-22L"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="approveButton" destination="QpK-3Y-1bf" id="N9e-Vr-be0"/>
+                <outlet property="slider" destination="wwY-bC-A1G" id="e7d-8M-yFi"/>
+                <outlet property="titleLabel" destination="VX5-1u-Si7" id="xY4-eR-AVI"/>
+            </connections>
+            <point key="canvasLocation" x="208" y="408.5"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="bt-check" width="24" height="24"/>
+        <image name="bt-check-selected" width="24" height="24"/>
+    </resources>
+</document>

@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ZCs-4N-g4o">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Profile View Controller-->
+        <scene sceneID="za1-Eh-jSn">
+            <objects>
+                <viewController storyboardIdentifier="ProfileViewController" id="ZCs-4N-g4o" customClass="ProfileViewController" customModule="CrowdSwiper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p47-G2-rlN"/>
+                        <viewControllerLayoutGuide type="bottom" id="LrV-gL-Zhe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mIc-sL-rQp">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k2R-4s-0mS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257" y="126"/>
+        </scene>
+        <!--Submitted Link View Controller-->
+        <scene sceneID="Yfp-X5-FWu">
+            <objects>
+                <viewController storyboardIdentifier="SubmittedLinkViewController" id="597-h6-hAw" customClass="SubmittedLinkViewController" customModule="CrowdSwiper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dNK-cX-SZe"/>
+                        <viewControllerLayoutGuide type="bottom" id="UiW-BL-eyT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UO1-vt-iFW">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="SbL-3A-i20">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="597-h6-hAw" id="LSl-Hc-kck"/>
+                                    <outlet property="delegate" destination="597-h6-hAw" id="CVp-FD-b1F"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="SbL-3A-i20" secondAttribute="trailing" id="3jy-cv-PUk"/>
+                            <constraint firstItem="SbL-3A-i20" firstAttribute="leading" secondItem="UO1-vt-iFW" secondAttribute="leading" id="8ZL-VY-WSK"/>
+                            <constraint firstItem="UiW-BL-eyT" firstAttribute="top" secondItem="SbL-3A-i20" secondAttribute="bottom" id="Bfq-yG-1bh"/>
+                            <constraint firstItem="SbL-3A-i20" firstAttribute="top" secondItem="dNK-cX-SZe" secondAttribute="bottom" id="g9h-FH-eh3"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="SbL-3A-i20" id="4zL-DX-Zzg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="s56-yo-dqt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="257" y="777"/>
+        </scene>
+        <!--Favorite View Controller-->
+        <scene sceneID="RFA-85-xE1">
+            <objects>
+                <viewController storyboardIdentifier="FavoriteViewController" id="XGk-Bt-K1c" customClass="FavoriteViewController" customModule="CrowdSwiper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DGr-kK-5rp"/>
+                        <viewControllerLayoutGuide type="bottom" id="AP7-Ke-G7y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="GCu-BL-fRx">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="oNM-9v-97N">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="XGk-Bt-K1c" id="fDa-v8-QLi"/>
+                                    <outlet property="delegate" destination="XGk-Bt-K1c" id="DEf-Zz-Kt2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oNM-9v-97N" firstAttribute="leading" secondItem="GCu-BL-fRx" secondAttribute="leading" id="9rU-L1-wPp"/>
+                            <constraint firstItem="AP7-Ke-G7y" firstAttribute="top" secondItem="oNM-9v-97N" secondAttribute="bottom" id="AfX-XE-DOA"/>
+                            <constraint firstItem="oNM-9v-97N" firstAttribute="top" secondItem="DGr-kK-5rp" secondAttribute="bottom" id="H4L-on-M1r"/>
+                            <constraint firstAttribute="trailing" secondItem="oNM-9v-97N" secondAttribute="trailing" id="It8-8e-0vA"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="tableView" destination="oNM-9v-97N" id="qqt-jt-dXt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3RQ-FL-sWC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="621" y="126"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,555 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="LE2-vS-rK9">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="ISc-xU-CBF">
+            <objects>
+                <navigationController id="LE2-vS-rK9" sceneMemberID="viewController">
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="mnY-uG-kF5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="aac-wd-brU" kind="relationship" relationship="rootViewController" id="BCd-o2-ALF"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Iq3-zJ-adQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-137" y="385"/>
+        </scene>
+        <!--DNEWS-->
+        <scene sceneID="3r9-xv-MGS">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="aac-wd-brU" customClass="LoginViewController" customModule="CrowdSwiper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="SsW-Ge-4NM"/>
+                        <viewControllerLayoutGuide type="bottom" id="3yj-5I-eMs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XTQ-20-tcb">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="viV-1e-Rrr" customClass="BaseTextField" customModule="CrowdSwiper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="280" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="nzn-ue-V8b"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="37q-HV-90e" customClass="BaseTextField" customModule="CrowdSwiper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="70" width="280" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EMZ-rc-Sh3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6n4-cG-qux" customClass="BaseButton" customModule="CrowdSwiper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="120" width="280" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="pqU-vC-7vu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="LOGIN">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="aac-wd-brU" eventType="touchUpInside" id="nHl-Ql-Yq6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G4o-Hy-lzw">
+                                <rect key="frame" x="20" y="170" width="280" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="56J-bv-fsZ" customClass="FBSDKLoginButton">
+                                <rect key="frame" x="20" y="198" width="280" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Wdf-D5-1SO"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P5R-Ru-bZb" customClass="GIDSignInButton">
+                                <rect key="frame" x="20" y="248" width="280" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FzX-fO-5IT"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwd-Lu-rnz">
+                                <rect key="frame" x="20" y="459" width="280" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="uhy-k6-Eer"/>
+                                </constraints>
+                                <state key="normal" title="Don't have an account? SIGN UP NOW"/>
+                                <connections>
+                                    <action selector="signupButtonPressed:" destination="aac-wd-brU" eventType="touchUpInside" id="RI8-Vq-iuA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ck8-F2-U5q">
+                                <rect key="frame" x="20" y="293" width="280" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Cnh-we-Aeg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Forgot Password?">
+                                    <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Ugz-Ub-5Qp" kind="show" id="oCa-hp-ybc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="6n4-cG-qux" firstAttribute="top" secondItem="37q-HV-90e" secondAttribute="bottom" constant="10" id="5Mc-d9-X4X"/>
+                            <constraint firstItem="Dwd-Lu-rnz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="ck8-F2-U5q" secondAttribute="bottom" constant="5" id="GTN-He-CU0"/>
+                            <constraint firstItem="P5R-Ru-bZb" firstAttribute="top" secondItem="56J-bv-fsZ" secondAttribute="bottom" constant="10" id="MH4-yE-Oag"/>
+                            <constraint firstAttribute="trailing" secondItem="6n4-cG-qux" secondAttribute="trailing" constant="20" id="MOA-qW-cJB"/>
+                            <constraint firstItem="Dwd-Lu-rnz" firstAttribute="leading" secondItem="XTQ-20-tcb" secondAttribute="leading" constant="20" id="PfK-nq-e2e"/>
+                            <constraint firstItem="37q-HV-90e" firstAttribute="leading" secondItem="XTQ-20-tcb" secondAttribute="leading" constant="20" id="QxI-Q3-tih"/>
+                            <constraint firstItem="P5R-Ru-bZb" firstAttribute="leading" secondItem="XTQ-20-tcb" secondAttribute="leading" constant="20" id="STt-7D-iu4"/>
+                            <constraint firstItem="G4o-Hy-lzw" firstAttribute="top" secondItem="6n4-cG-qux" secondAttribute="bottom" constant="10" id="T1Z-Hd-EnX"/>
+                            <constraint firstAttribute="trailing" secondItem="G4o-Hy-lzw" secondAttribute="trailing" constant="20" id="VYR-70-hpi"/>
+                            <constraint firstItem="ck8-F2-U5q" firstAttribute="top" secondItem="P5R-Ru-bZb" secondAttribute="bottom" constant="5" id="XOp-kC-aZ2"/>
+                            <constraint firstAttribute="trailing" secondItem="P5R-Ru-bZb" secondAttribute="trailing" constant="20" id="ZDw-dB-Ogw"/>
+                            <constraint firstItem="viV-1e-Rrr" firstAttribute="top" secondItem="SsW-Ge-4NM" secondAttribute="bottom" constant="20" id="bVT-qJ-mPL"/>
+                            <constraint firstItem="3yj-5I-eMs" firstAttribute="top" secondItem="Dwd-Lu-rnz" secondAttribute="bottom" constant="10" id="dfj-8L-4Wr"/>
+                            <constraint firstAttribute="trailing" secondItem="56J-bv-fsZ" secondAttribute="trailing" constant="20" id="hEI-Hw-ng3"/>
+                            <constraint firstItem="37q-HV-90e" firstAttribute="top" secondItem="viV-1e-Rrr" secondAttribute="bottom" constant="10" id="iWV-j8-eqX"/>
+                            <constraint firstAttribute="trailing" secondItem="Dwd-Lu-rnz" secondAttribute="trailing" constant="20" id="kC4-Pa-RO9"/>
+                            <constraint firstItem="ck8-F2-U5q" firstAttribute="leading" secondItem="XTQ-20-tcb" secondAttribute="leading" constant="20" id="kz0-PO-wWM"/>
+                            <constraint firstItem="56J-bv-fsZ" firstAttribute="top" secondItem="G4o-Hy-lzw" secondAttribute="bottom" constant="10" id="l4q-ZN-oeY"/>
+                            <constraint firstAttribute="trailing" secondItem="37q-HV-90e" secondAttribute="trailing" constant="20" id="l6F-7y-G6d"/>
+                            <constraint firstItem="6n4-cG-qux" firstAttribute="leading" secondItem="XTQ-20-tcb" secondAttribute="leading" constant="20" id="mid-nM-abW"/>
+                            <constraint firstItem="56J-bv-fsZ" firstAttribute="leading" secondItem="XTQ-20-tcb" secondAttribute="leading" constant="20" id="rOu-3f-0ec"/>
+                            <constraint firstAttribute="trailing" secondItem="ck8-F2-U5q" secondAttribute="trailing" constant="20" id="rSV-LM-O2O"/>
+                            <constraint firstItem="G4o-Hy-lzw" firstAttribute="leading" secondItem="XTQ-20-tcb" secondAttribute="leading" constant="20" id="w4c-GB-lZS"/>
+                            <constraint firstItem="viV-1e-Rrr" firstAttribute="leading" secondItem="XTQ-20-tcb" secondAttribute="leading" constant="20" id="yB8-bI-ZIb"/>
+                            <constraint firstAttribute="trailing" secondItem="viV-1e-Rrr" secondAttribute="trailing" constant="20" id="zWr-08-MIH"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <navigationItem key="navigationItem" title="DNEWS" id="tDe-03-t6o"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="emailTf" destination="viV-1e-Rrr" id="dbV-mQ-lt5"/>
+                        <outlet property="facebookLoginButton" destination="56J-bv-fsZ" id="v4J-Df-bqA"/>
+                        <outlet property="googleSigninButton" destination="P5R-Ru-bZb" id="NRR-5Q-pU1"/>
+                        <outlet property="loginButton" destination="6n4-cG-qux" id="8uY-jE-wjd"/>
+                        <outlet property="passwordTf" destination="37q-HV-90e" id="UNF-E7-rqX"/>
+                        <outlet property="signupButton" destination="Dwd-Lu-rnz" id="eIj-y8-Zpe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uBt-PQ-d8v" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="275" y="385"/>
+        </scene>
+        <!--Forgot Pass View Controller-->
+        <scene sceneID="KlX-bc-dVd">
+            <objects>
+                <viewController storyboardIdentifier="ForgotPassViewController" id="Ugz-Ub-5Qp" customClass="ForgotPassViewController" customModule="CrowdSwiper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Nhc-Lv-tSz"/>
+                        <viewControllerLayoutGuide type="bottom" id="vqS-gV-PcL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="VqO-oM-k6S">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHC-g2-MHu" userLabel="firstview">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter your email to reset Password. We will send a token to your email for resetting password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qev-N1-ns8">
+                                        <rect key="frame" x="20" y="15" width="280" height="54"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Your Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bIE-Lr-Q8Z" customClass="BaseTextField" customModule="CrowdSwiper" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="84" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="eya-CI-T4E"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xva-Ru-420" customClass="BaseButton" customModule="CrowdSwiper" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="144" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="Tna-O6-Wb6"/>
+                                        </constraints>
+                                        <state key="normal" title="Send Token">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="sendTokenButtonPressed:" destination="Ugz-Ub-5Qp" eventType="touchUpInside" id="GPU-yv-ozC"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="xva-Ru-420" firstAttribute="top" secondItem="bIE-Lr-Q8Z" secondAttribute="bottom" constant="20" id="1R3-wJ-Sgo"/>
+                                    <constraint firstAttribute="trailing" secondItem="bIE-Lr-Q8Z" secondAttribute="trailing" constant="20" id="2PJ-pU-vrx"/>
+                                    <constraint firstItem="qev-N1-ns8" firstAttribute="leading" secondItem="EHC-g2-MHu" secondAttribute="leading" constant="20" id="7aA-Hn-6lC"/>
+                                    <constraint firstItem="qev-N1-ns8" firstAttribute="top" secondItem="EHC-g2-MHu" secondAttribute="top" constant="15" id="9eJ-ws-eVQ"/>
+                                    <constraint firstItem="bIE-Lr-Q8Z" firstAttribute="leading" secondItem="EHC-g2-MHu" secondAttribute="leading" constant="20" id="NLf-60-gtK"/>
+                                    <constraint firstAttribute="trailing" secondItem="xva-Ru-420" secondAttribute="trailing" constant="20" id="OzE-RK-Svo"/>
+                                    <constraint firstItem="xva-Ru-420" firstAttribute="leading" secondItem="EHC-g2-MHu" secondAttribute="leading" constant="20" id="XV2-ve-YWU"/>
+                                    <constraint firstAttribute="trailing" secondItem="qev-N1-ns8" secondAttribute="trailing" constant="20" id="nNs-4l-cy4"/>
+                                    <constraint firstItem="bIE-Lr-Q8Z" firstAttribute="top" secondItem="qev-N1-ns8" secondAttribute="bottom" constant="15" id="yR9-Jg-70w"/>
+                                </constraints>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ozc-Gc-5Xd" userLabel="secondview">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter token attached on email we sent to you to reset password" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Mw-yd-Jh6">
+                                        <rect key="frame" x="20" y="15" width="280" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Token" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4F1-Vt-FTg" customClass="BaseTextField" customModule="CrowdSwiper" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="66" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="lbz-Qj-aQe"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7sG-w5-MMd" customClass="BaseTextField" customModule="CrowdSwiper" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="116" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="saf-V8-dcx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm New Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ory-GA-azg" customClass="BaseTextField" customModule="CrowdSwiper" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="166" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="DvD-VG-VDT"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                                <real key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3J-Nr-BGO" customClass="BaseButton" customModule="CrowdSwiper" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="226" width="280" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="r3s-XF-F0j"/>
+                                        </constraints>
+                                        <state key="normal" title="Reset Password">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="4"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="resetPassPressed:" destination="Ugz-Ub-5Qp" eventType="touchUpInside" id="CPJ-L8-uAc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="1Mw-yd-Jh6" secondAttribute="trailing" constant="20" id="BUK-Ff-MGt"/>
+                                    <constraint firstItem="4F1-Vt-FTg" firstAttribute="top" secondItem="1Mw-yd-Jh6" secondAttribute="bottom" constant="15" id="Ege-RV-DZX"/>
+                                    <constraint firstAttribute="trailing" secondItem="7sG-w5-MMd" secondAttribute="trailing" constant="20" id="KMg-J2-xlR"/>
+                                    <constraint firstItem="7sG-w5-MMd" firstAttribute="top" secondItem="4F1-Vt-FTg" secondAttribute="bottom" constant="10" id="LiS-XL-mmz"/>
+                                    <constraint firstItem="z3J-Nr-BGO" firstAttribute="leading" secondItem="ozc-Gc-5Xd" secondAttribute="leading" constant="20" id="QKX-EV-K2I"/>
+                                    <constraint firstAttribute="trailing" secondItem="z3J-Nr-BGO" secondAttribute="trailing" constant="20" id="SpV-q5-slk"/>
+                                    <constraint firstItem="z3J-Nr-BGO" firstAttribute="top" secondItem="Ory-GA-azg" secondAttribute="bottom" constant="20" id="WS3-4Q-Cr9"/>
+                                    <constraint firstItem="7sG-w5-MMd" firstAttribute="leading" secondItem="ozc-Gc-5Xd" secondAttribute="leading" constant="20" id="cdj-15-dzz"/>
+                                    <constraint firstItem="1Mw-yd-Jh6" firstAttribute="leading" secondItem="ozc-Gc-5Xd" secondAttribute="leading" constant="20" id="giq-un-jVl"/>
+                                    <constraint firstItem="4F1-Vt-FTg" firstAttribute="leading" secondItem="ozc-Gc-5Xd" secondAttribute="leading" constant="20" id="naG-Av-Jf2"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ory-GA-azg" secondAttribute="trailing" constant="20" id="oww-cE-3yR"/>
+                                    <constraint firstItem="Ory-GA-azg" firstAttribute="top" secondItem="7sG-w5-MMd" secondAttribute="bottom" constant="10" id="qQ8-5P-Gvh"/>
+                                    <constraint firstAttribute="trailing" secondItem="4F1-Vt-FTg" secondAttribute="trailing" constant="20" id="rUT-8T-MkV"/>
+                                    <constraint firstItem="1Mw-yd-Jh6" firstAttribute="top" secondItem="ozc-Gc-5Xd" secondAttribute="top" constant="15" id="xiq-Bu-gsD"/>
+                                    <constraint firstItem="Ory-GA-azg" firstAttribute="leading" secondItem="ozc-Gc-5Xd" secondAttribute="leading" constant="20" id="yK2-it-Ghe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ozc-Gc-5Xd" secondAttribute="trailing" id="1Ij-CY-t7o"/>
+                            <constraint firstItem="ozc-Gc-5Xd" firstAttribute="leading" secondItem="VqO-oM-k6S" secondAttribute="leading" id="2G1-fS-q09"/>
+                            <constraint firstAttribute="trailing" secondItem="EHC-g2-MHu" secondAttribute="trailing" id="2kt-3g-6rf"/>
+                            <constraint firstItem="ozc-Gc-5Xd" firstAttribute="top" secondItem="Nhc-Lv-tSz" secondAttribute="bottom" id="WOG-l4-pWm"/>
+                            <constraint firstItem="EHC-g2-MHu" firstAttribute="leading" secondItem="VqO-oM-k6S" secondAttribute="leading" id="iNX-4y-2vg"/>
+                            <constraint firstItem="vqS-gV-PcL" firstAttribute="top" secondItem="ozc-Gc-5Xd" secondAttribute="bottom" id="j9V-vM-r7C"/>
+                            <constraint firstItem="vqS-gV-PcL" firstAttribute="top" secondItem="EHC-g2-MHu" secondAttribute="bottom" id="uyl-my-wdi"/>
+                            <constraint firstItem="EHC-g2-MHu" firstAttribute="top" secondItem="Nhc-Lv-tSz" secondAttribute="bottom" id="x8O-I2-6pZ"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="confirmPassTf" destination="Ory-GA-azg" id="Aon-yS-E8F"/>
+                        <outlet property="emailTf" destination="bIE-Lr-Q8Z" id="X67-aV-hu5"/>
+                        <outlet property="firstView" destination="EHC-g2-MHu" id="qYt-3l-aAG"/>
+                        <outlet property="passwordTf" destination="7sG-w5-MMd" id="FQ4-gt-dwk"/>
+                        <outlet property="resetButton" destination="z3J-Nr-BGO" id="dsQ-8o-BOA"/>
+                        <outlet property="secondView" destination="ozc-Gc-5Xd" id="Ikx-fl-aly"/>
+                        <outlet property="sendButton" destination="xva-Ru-420" id="VIv-uv-GLj"/>
+                        <outlet property="tokenTf" destination="4F1-Vt-FTg" id="M2I-4O-sEd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6be-jW-fX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="275" y="1035"/>
+        </scene>
+        <!--Signup View Controller-->
+        <scene sceneID="MNn-kR-abc">
+            <objects>
+                <viewController storyboardIdentifier="SignupViewController" id="Dtk-Wo-rbg" customClass="SignupViewController" customModule="CrowdSwiper" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RE0-S6-iaB"/>
+                        <viewControllerLayoutGuide type="bottom" id="wjL-eG-qLq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xqV-wt-MM2">
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="old-XW-Rjf" customClass="BaseTextField" customModule="CrowdSwiper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="20" width="280" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="RW8-UF-L2D"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2zk-1d-MYg" customClass="BaseTextField" customModule="CrowdSwiper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="70" width="280" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="k63-tg-n6f"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gOb-x8-leB" customClass="BaseTextField" customModule="CrowdSwiper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="120" width="280" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="cXl-mI-6BI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="padding">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PtQ-Yt-eui" userLabel="political" customClass="DropdownControl" customModule="CrowdSwiper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="170" width="280" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1FS-8b-fEq"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Political Persuasion"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="politicalPressed:" destination="Dtk-Wo-rbg" eventType="touchUpInside" id="UnY-83-6F0"/>
+                                </connections>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v52-Sm-bHX" customClass="BaseButton" customModule="CrowdSwiper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="307" width="280" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="EC3-iO-lfF"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="SIGN UP">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="loginButtonPressed:" destination="aac-wd-brU" eventType="touchUpInside" id="2ds-Su-NGo"/>
+                                    <action selector="signupButtonPressed:" destination="Dtk-Wo-rbg" eventType="touchUpInside" id="mUj-GE-GPw"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pick Birthday (Optional)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KEU-Zd-Dhl">
+                                <rect key="frame" x="20" y="220" width="280" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DJp-1w-NoP" userLabel="birthday" customClass="DropdownControl" customModule="CrowdSwiper" customModuleProvider="target">
+                                <rect key="frame" x="20" y="247" width="280" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="PGs-3d-8Ih"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="radius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="placeHolder" value="Select Birthday"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="birthdayPressed:" destination="Dtk-Wo-rbg" eventType="touchUpInside" id="5Rl-aC-6V0"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PtQ-Yt-eui" firstAttribute="leading" secondItem="xqV-wt-MM2" secondAttribute="leading" constant="20" id="0Zu-ZE-qBb"/>
+                            <constraint firstItem="v52-Sm-bHX" firstAttribute="leading" secondItem="xqV-wt-MM2" secondAttribute="leading" constant="20" id="2tn-AR-v8d"/>
+                            <constraint firstItem="DJp-1w-NoP" firstAttribute="leading" secondItem="xqV-wt-MM2" secondAttribute="leading" constant="20" id="69I-j8-1ny"/>
+                            <constraint firstItem="PtQ-Yt-eui" firstAttribute="top" secondItem="gOb-x8-leB" secondAttribute="bottom" constant="10" id="6EC-Rl-NPm"/>
+                            <constraint firstItem="old-XW-Rjf" firstAttribute="top" secondItem="RE0-S6-iaB" secondAttribute="bottom" constant="20" id="7TR-pi-pva"/>
+                            <constraint firstAttribute="trailing" secondItem="v52-Sm-bHX" secondAttribute="trailing" constant="20" id="9We-HA-g0I"/>
+                            <constraint firstAttribute="trailing" secondItem="DJp-1w-NoP" secondAttribute="trailing" constant="20" id="BiP-KH-ae8"/>
+                            <constraint firstAttribute="trailing" secondItem="old-XW-Rjf" secondAttribute="trailing" constant="20" id="Jot-Oc-Zba"/>
+                            <constraint firstAttribute="trailing" secondItem="2zk-1d-MYg" secondAttribute="trailing" constant="20" id="Mkc-mf-BNg"/>
+                            <constraint firstItem="KEU-Zd-Dhl" firstAttribute="top" secondItem="PtQ-Yt-eui" secondAttribute="bottom" constant="10" id="Q3d-OU-3af"/>
+                            <constraint firstItem="KEU-Zd-Dhl" firstAttribute="leading" secondItem="xqV-wt-MM2" secondAttribute="leading" constant="20" id="RBm-OZ-SUe"/>
+                            <constraint firstItem="gOb-x8-leB" firstAttribute="leading" secondItem="xqV-wt-MM2" secondAttribute="leading" constant="20" id="ZTU-0E-KkF"/>
+                            <constraint firstItem="old-XW-Rjf" firstAttribute="leading" secondItem="xqV-wt-MM2" secondAttribute="leading" constant="20" id="aRi-pO-1WG"/>
+                            <constraint firstItem="gOb-x8-leB" firstAttribute="top" secondItem="2zk-1d-MYg" secondAttribute="bottom" constant="10" id="bHe-t1-ous"/>
+                            <constraint firstAttribute="trailing" secondItem="gOb-x8-leB" secondAttribute="trailing" constant="20" id="ewA-1X-A2M"/>
+                            <constraint firstAttribute="trailing" secondItem="PtQ-Yt-eui" secondAttribute="trailing" constant="20" id="fT0-1l-p6G"/>
+                            <constraint firstItem="DJp-1w-NoP" firstAttribute="top" secondItem="KEU-Zd-Dhl" secondAttribute="bottom" constant="10" id="iIy-uU-LZ4"/>
+                            <constraint firstAttribute="trailing" secondItem="KEU-Zd-Dhl" secondAttribute="trailing" constant="20" id="jVd-mW-JPI"/>
+                            <constraint firstItem="v52-Sm-bHX" firstAttribute="top" secondItem="DJp-1w-NoP" secondAttribute="bottom" constant="20" id="kyh-lE-vCQ"/>
+                            <constraint firstItem="2zk-1d-MYg" firstAttribute="top" secondItem="old-XW-Rjf" secondAttribute="bottom" constant="10" id="qfN-OF-VC8"/>
+                            <constraint firstItem="2zk-1d-MYg" firstAttribute="leading" secondItem="xqV-wt-MM2" secondAttribute="leading" constant="20" id="xqr-JV-fX8"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="birthdayPicker" destination="DJp-1w-NoP" id="iNl-h6-HI8"/>
+                        <outlet property="confirmPassTf" destination="gOb-x8-leB" id="bdE-Wg-yDj"/>
+                        <outlet property="emailTf" destination="old-XW-Rjf" id="4hh-hC-lDL"/>
+                        <outlet property="passwordTf" destination="2zk-1d-MYg" id="Kx3-d5-dyD"/>
+                        <outlet property="politicalPicker" destination="PtQ-Yt-eui" id="emq-qo-FFD"/>
+                        <outlet property="signupButton" destination="v52-Sm-bHX" id="puW-Ub-mIj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qHR-7q-ESg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="385"/>
+        </scene>
+    </scenes>
+</document>
